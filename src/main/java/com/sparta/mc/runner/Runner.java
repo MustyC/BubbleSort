@@ -15,15 +15,15 @@ public class Runner {
     }
     System.out.println( "\n" );
 
-//    ArrayMerger mergedArr = new ArrayMerger();
-//    int[] intArr1 = { 1, 3, 5, 7, 9, 11, 13, 15, 17 };
-//    int[] intArr2 = { 2, 4, 6, 8, 10, 12, 14, 16, 18 };
-//    int[] mergedArray = new int[ intArr1.length + intArr2.length ];
-//    ArrayMerger.mergedArr( intArr1, intArr2 );
-//
-//    for ( int i = 0; i < mergedArray.length; i++ ) {
-//      System.out.print( mergedArray[ i ] + ", " );
-//
-//    }
+    ArrayMerger arrayMerger= new ArrayMerger();
+    int[] intArr1 = { 1, 3, 5, 7, 9, 11, 13, 15, 17 };
+    int[] intArr2 = { 2, 4, 6, 8, 10, 12, 14, 16, 18 };
+    int[] mergedArray = new int[ intArr1.length + intArr2.length ];
+//    ArrayMerger.ArrayMerger( intArr1, intArr2 );
+
+    for ( int i = 0; i < mergedArray.length; i++ ) {
+      System.out.print( mergedArray[ i ] + ", " );
+
+    }
   }
 }

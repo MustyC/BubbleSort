@@ -1,7 +1,7 @@
 package com.sparta.mc.alogrithms;
 
 public class ArrayMerger {
-  public int[] merge( int[] arr1, int[] arr2 ) {
+  public int[] mergeArray( int[] arr1, int[] arr2 ) {
     //create merged array with the length of the two arrays combines to store all their values
     int[] mergedArray = new int[ arr1.length + arr2.length ];
     //create ints to store the value of the current index

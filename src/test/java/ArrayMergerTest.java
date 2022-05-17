@@ -1,5 +1,4 @@
 import com.sparta.mc.alogrithms.ArrayMerger;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -16,7 +15,7 @@ public class ArrayMergerTest {
     int[] expectedResult = new int[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13 };
 
     // When
-    int[] actualResult = arrayMerger.merge( odds, evens );
+    int[] actualResult = arrayMerger.mergeArray( odds, evens );
     // Then
     assertThat( actualResult ).isEqualTo( expectedResult );
   }
@@ -30,7 +29,7 @@ public class ArrayMergerTest {
     int[] expectedResult = new int[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13 };
 
     // When
-    int[] actualResult = arrayMerger.merge( evens, odds );
+    int[] actualResult = arrayMerger.mergeArray( evens, odds );
     // Then
     assertThat( actualResult ).isEqualTo( expectedResult );
   }
@@ -44,7 +43,7 @@ public class ArrayMergerTest {
     int[] expectedResult = new int[]{ 1, 2, 3, 4, 5, 6, 7, 8 };
 
     // When
-    int[] actualResult = arrayMerger.merge( evens, odds );
+    int[] actualResult = arrayMerger.mergeArray( evens, odds );
     // Then
     assertThat( actualResult ).isEqualTo( expectedResult );
   }
@@ -58,7 +57,7 @@ public class ArrayMergerTest {
     int[] expectedResult = new int[]{ 1, 1, 2, 2, 3, 4, 5, 6, 7, 8 };
 
     // When
-    int[] actualResult = arrayMerger.merge( arrayOne, arrayTwo );
+    int[] actualResult = arrayMerger.mergeArray( arrayOne, arrayTwo );
     // Then
     assertThat( actualResult ).isEqualTo( expectedResult );
   }
@@ -72,7 +71,7 @@ public class ArrayMergerTest {
     int[] expectedResult = new int[]{ 1, 1, 2, 2, 4, 4, 6, 6, 8, 8 };
 
     // When
-    int[] actualResult = arrayMerger.merge( arrayOne, arrayTwo );
+    int[] actualResult = arrayMerger.mergeArray( arrayOne, arrayTwo );
     // Then
     assertThat( actualResult ).isEqualTo( expectedResult );
   }
