@@ -1,4 +1,4 @@
-package com.sparta.mc.alogrithms;
+package com.sparta.mc.sorters;
 
 public class ArrayMerger {
   public int[] mergeArray( int[] arr1, int[] arr2 ) {

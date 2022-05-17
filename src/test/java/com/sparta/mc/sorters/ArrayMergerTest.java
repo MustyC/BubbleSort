@@ -1,4 +1,6 @@
-import com.sparta.mc.alogrithms.ArrayMerger;
+package com.sparta.mc.sorters;
+
+import com.sparta.mc.sorters.ArrayMerger;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;

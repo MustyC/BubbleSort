@@ -1,7 +1,7 @@
-package com.sparta.mc.alogrithms;
+package com.sparta.mc.sorters;
 
-public class BubbleSort {
-  public static int[] bubbleSort( int[] sortArray ) { //returning array, taking in array as parameter
+public class BubbleSorter implements Sorter {
+  public int[] sortArray( int[] sortArray ) { //returning array, taking in array as parameter
 
     //iterative for loop. works over every element in the array
     for ( int i = 0; i < sortArray.length; i++ ) {
@@ -20,5 +20,6 @@ public class BubbleSort {
     }
     return sortArray;
   }
+
 
 }

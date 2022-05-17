@@ -1,15 +1,19 @@
-import com.sparta.mc.alogrithms.MergeSort;
-import org.junit.jupiter.api.Assertions;
+package com.sparta.mc.sorters;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class MergeSortTest {
+public class MergeSorterTest {
+
+MergeSorter mergeSorter = new MergeSorter();
+
   @Test
   public void evenNumberOfElements() {
+
     int[] actual = { 5, 1, 6, 2, 3, 4, 8, 7 };
     int[] expected = { 1, 2, 3, 4, 5, 6, 7, 8 };
-    MergeSort.mergeSort( actual, actual.length );
+    mergeSorter.sortArray( actual, actual.length );
     assertArrayEquals( expected, actual );
   }
 
@@ -17,7 +21,7 @@ public class MergeSortTest {
   public void oddNumberOfElements() {
     int[] actualArray = new int[]{ 9, 2, 1, 4, 3, 6, 5, 8, 7 };
     int[] expectedArray = new int[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    MergeSort.mergeSort( actualArray, actualArray.length );
+    mergeSorter.sortArray( actualArray, actualArray.length );
     assertArrayEquals( expectedArray, actualArray );
   }
 
@@ -25,13 +29,13 @@ public class MergeSortTest {
   public void withDuplicateElements() {
     int[] actualArray = new int[]{ 9, 2, 1, 4, 3, 3, 4, 3, 6, 1, 6, 5, 8, 7 };
     int[] expectedArray = new int[]{ 1, 1, 2, 3, 3, 3, 4, 4, 5, 6, 6, 7, 8, 9 };
-    MergeSort.mergeSort( actualArray, actualArray.length );
+    mergeSorter.sortArray( actualArray, actualArray.length );
     assertArrayEquals( expectedArray, actualArray );
   }
 
   @Test
   public void largeArray() {
-    int[] actual = {492, 951, 553, 76, 975, 486, 865, 166, 758, 916, 765, 442, 197, 901, 244, 600, 659, 215, 883, 681,
+    int[] actual = { 492, 951, 553, 76, 975, 486, 865, 166, 758, 916, 765, 442, 197, 901, 244, 600, 659, 215, 883, 681,
             639, 944, 564, 791, 997, 624, 62, 653, 836, 91, 41, 656, 974, 394, 552, 186, 241, 240, 32, 890, 867, 455,
             937, 409, 334, 906, 43, 123, 174, 354, 948, 192, 586, 855, 694, 86, 855, 580, 682, 207, 509, 703, 490, 911,
             220, 750, 115, 460, 249, 720, 114, 266, 177, 752, 270, 855, 39, 494, 597, 676, 259, 274, 672, 300, 928,
@@ -77,7 +81,7 @@ public class MergeSortTest {
             168, 224, 596, 759, 569, 595, 868, 827, 640, 899, 493, 852, 458, 88, 884, 724, 274, 372, 747, 296, 526,
             593, 436, 955, 406, 955, 663, 470, 640, 75, 94, 602, 749, 679, 264, 3, 796, 725, 881, 92, 864, 119, 669,
             173, 204, 39, 965, 883, 968, 834, 192, 583, 642, 476, 398, 471, 414, 854, 292, 48, 420, 65, 11, 856, 943,
-            321, 184, 273, 445, 258, 978, 540, 778, 128, 855, 48, 100, 399, 330, 974, 843, 683, 864, 549, 643};
+            321, 184, 273, 445, 258, 978, 540, 778, 128, 855, 48, 100, 399, 330, 974, 843, 683, 864, 549, 643 };
 
     int[] expected = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
             26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
@@ -126,7 +130,7 @@ public class MergeSortTest {
             943, 944, 945, 946, 947, 948, 949, 950, 951, 952, 953, 954, 955, 956, 957, 958, 959, 960, 961, 962, 963,
             964, 965, 966, 967, 968, 969, 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984,
             985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000 };
-    MergeSort.mergeSort( actual, actual.length );
+    mergeSorter.sortArray( actual, actual.length );
     assertArrayEquals( expected, actual );
   }
 }
